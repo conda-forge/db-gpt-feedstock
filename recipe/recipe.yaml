@@ -449,4 +449,5 @@ about:
 extra:
   feedstock-name: db-gpt
   recipe-maintainers:
+    - rxm7706
     - pb01ka
