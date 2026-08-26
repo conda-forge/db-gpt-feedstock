@@ -59,31 +59,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `dbgpt, dbgpt-acc-auto, dbgpt-acc-flash-attn, dbgpt-agent, dbgpt-app, dbgpt-cli, dbgpt-client, dbgpt-code, dbgpt-ext, dbgpt-ext-chromadb, dbgpt-ext-rag, dbgpt-framework, dbgpt-proxy-openai, dbgpt-proxy-tongyi, dbgpt-sandbox, dbgpt-serve` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install dbgpt dbgpt-acc-auto dbgpt-acc-flash-attn dbgpt-agent dbgpt-app dbgpt-cli dbgpt-client dbgpt-code dbgpt-ext dbgpt-ext-chromadb dbgpt-ext-rag dbgpt-framework dbgpt-proxy-openai dbgpt-proxy-tongyi dbgpt-sandbox dbgpt-serve
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install dbgpt dbgpt-acc-auto dbgpt-acc-flash-attn dbgpt-agent dbgpt-app dbgpt-cli dbgpt-client dbgpt-code dbgpt-ext dbgpt-ext-chromadb dbgpt-ext-rag dbgpt-framework dbgpt-proxy-openai dbgpt-proxy-tongyi dbgpt-sandbox dbgpt-serve
 ```
 
-It is possible to list all of the versions of `dbgpt` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add dbgpt dbgpt-acc-auto dbgpt-acc-flash-attn dbgpt-agent dbgpt-app dbgpt-cli dbgpt-client dbgpt-code dbgpt-ext dbgpt-ext-chromadb dbgpt-ext-rag dbgpt-framework dbgpt-proxy-openai dbgpt-proxy-tongyi dbgpt-sandbox dbgpt-serve
+# for installing globally
+pixi global install dbgpt dbgpt-acc-auto dbgpt-acc-flash-attn dbgpt-agent dbgpt-app dbgpt-cli dbgpt-client dbgpt-code dbgpt-ext dbgpt-ext-chromadb dbgpt-ext-rag dbgpt-framework dbgpt-proxy-openai dbgpt-proxy-tongyi dbgpt-sandbox dbgpt-serve
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `dbgpt` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search dbgpt --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search dbgpt --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search dbgpt --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -95,6 +137,8 @@ mamba repoquery whoneeds dbgpt --channel conda-forge
 # List dependencies of `dbgpt`:
 mamba repoquery depends dbgpt --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
@@ -164,4 +208,5 @@ Feedstock Maintainers
 =====================
 
 * [@pb01ka](https://github.com/pb01ka/)
+* [@rxm7706](https://github.com/rxm7706/)
 
