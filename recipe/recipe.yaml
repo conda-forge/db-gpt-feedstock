@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.8.1"
+  version: "0.8.2"
 
 recipe:
   name: dbgpt-split
@@ -10,7 +10,7 @@ recipe:
 
 source:
   url: https://github.com/eosphoros-ai/DB-GPT/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 65e25642dfb0f2e3028a50301fda060ca09008d754ea46a8268edc47c131a2ec
+  sha256: 84cf1a81aa9412b7195483b8697474051b5a55932b897b8e71ec4bc654701521
 
 build:
   number: 0
