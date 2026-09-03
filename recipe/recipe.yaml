@@ -16,10 +16,12 @@ source:
     # cap to <2.1 to match the loosened dbgpt-client run: dep below (G26:
     # pip_check reads the WHEEL's dist-info METADATA, which still bakes in
     # upstream's cap unless the source pyproject is patched too).
+    - patches/0001-loosen-dbgpt-core-numpy-cap.patch
+    - patches/0002-loosen-dbgpt-ext-onnxruntime-cap.patch
     - patches/0003-loosen-dbgpt-client-sqlalchemy-cap.patch
 
 build:
-  number: 1
+  number: 2
 
 outputs:
   - package:
@@ -304,7 +306,7 @@ outputs:
         - olefile
         - pypdf
         - pdfplumber
-        - onnxruntime >=1.14.1,<=1.18.1
+        - onnxruntime >=1.14.1
     tests:
       - python:
           pip_check: true
@@ -344,7 +346,7 @@ outputs:
         - ${{ pin_subpackage('dbgpt', lower_bound='x.x.x', upper_bound='x.x.x') }}
         - termcolor
         - pandas >=2.2.3
-        - numpy >=1.21.0,<2.0.0
+        - numpy >=1.21.0
         - auto-gpt-plugin-template >=0.0.3
         - mcp >=1.4.1
     tests:
